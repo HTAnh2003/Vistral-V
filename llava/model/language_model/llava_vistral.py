@@ -72,7 +72,8 @@ class LlavaVistralForCausalLM(MistralForCausalLM, LlavaMetaForCausalLM):
                 images,
                 image_sizes
             )
-
+        print('------hidden_states------', output_hidden_states)
+        print('------size_hidden_states------', output_hidden_states.shape)
         return super().forward(
             input_ids=input_ids,
             attention_mask=attention_mask,
